@@ -1,7 +1,7 @@
 # Calculator-in-8086-Assembly
 This project implements a simple arithmetic calculator using 8086 Assembly language for DOS. The calculator takes two single-digit operands and an operator as input, performs the corresponding arithmetic operation, and displays the result. It handles addition, subtraction, multiplication, division, and includes basic error handling for invalid operators and division by zero.
 
-💻 Features
+#Features
 Accepts two single-digit operands (0-9)
 Supports the following operators:
 + (Addition)
@@ -13,7 +13,9 @@ Handles division by zero with a custom message (Infinity)
 Handles invalid operators with a custom message
 Handles negative results
 Result formatting includes CR, LF, and ends with $ for DOS string compatibility
-📜 How It Works
+
+##How it works
+
 Reads user input via DOS interrupt (int 21h):
 
 First operand (a digit 0–9)
@@ -37,14 +39,3 @@ Adds an equal sign (=) before the result.
 Handles negative results by printing a minus sign and converting the result to positive.
 Converts the numeric result into ASCII characters (supports two-digit results).
 Uses int 21h function 09h to print the formatted result.
-🖥 Example Output
-Input	Output
-2+3	=05
-4/0	=Infinity
-6$2	=Invalid operator
-3-8	=-05
-⚠️ Limitations
-Only works with single-digit operands (0-9)
-No support for decimal/fractional values
-Input must be sequential and manual via keyboard (no prompt)
-Only integer division (truncates result)
